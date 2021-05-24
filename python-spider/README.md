@@ -1,4 +1,3 @@
-# 注：2020年最新连载教程请移步：[Python Spider 2020](https://github.com/Jack-Cherish/python-spider/tree/master/2020 "Python Spider 2020")
 
 # Python Spider
 
@@ -6,10 +5,6 @@
 ## 声明
 
 * 代码、教程**仅限于学习交流，请勿用于任何商业用途！**
-
-### 文章首发声明
-
-* 文章在自己的个人网站首发，其他平台文章均属转发，如想获得最新更新进展，欢迎关注我的个人网站：http://cuijiahua.com/
 
 ## 目录
 
