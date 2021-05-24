@@ -6,22 +6,21 @@ from bs4 import BeautifulSoup
 import re
 import time
 
-from splinter import driver
 
 if __name__ == '__main__':
 
 	options = webdriver.ChromeOptions()
 	options.add_argument('user-agent="Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19"')
-	# driver = webdriver.Chrome('J:\迅雷下载\chromedriver.exe', chrome_options=options)
-	driver.get('http://www.jiapai.net.cn/')
+	driver = webdriver.Chrome('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe', chrome_options=options)
+	driver.get('https://wenku.baidu.com/view/aa31a84bcf84b9d528ea7a2c.html')
 
 	html = driver.page_source
-	bf1 = BeautifulSoup(html, 'lxml')
+	bf1 = BeautifulSoup(html, 'html')
 	result = bf1.find_all(class_='rtcspage')
-	bf2 = BeautifulSoup(str(result[0]), 'lxml')
+	bf2 = BeautifulSoup(str(result[0]), 'html')
 	title = bf2.div.div.h1.string
 	pagenum = bf2.find_all(class_='size')
-	pagenum = BeautifulSoup(str(pagenum), 'lxml').span.string
+	pagenum = BeautifulSoup(str(pagenum), 'html').span.string
 	pagepattern = re.compile('页数：(\d+)页')
 	num = int(pagepattern.findall(pagenum)[0])
 	print('文章标题：%s' % title)
