@@ -114,7 +114,7 @@ def translate(str):
 
 def get_job(url, conn, cursor, city_name_x):
     html = get_page(url)
-    soup = BeautifulSoup(html, 'html')
+    soup = BeautifulSoup(html, 'lxml')
     job_all = soup.find_all('div', class_="job-primary")
     if (job_all == []):
         print("cookie已过期")

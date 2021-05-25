@@ -15,12 +15,12 @@ if __name__ == '__main__':
 	driver.get('https://wenku.baidu.com/view/aa31a84bcf84b9d528ea7a2c.html')
 
 	html = driver.page_source
-	bf1 = BeautifulSoup(html, 'html')
+	bf1 = BeautifulSoup(html, 'lxml')
 	result = bf1.find_all(class_='rtcspage')
-	bf2 = BeautifulSoup(str(result[0]), 'html')
+	bf2 = BeautifulSoup(str(result[0]), 'lxml')
 	title = bf2.div.div.h1.string
 	pagenum = bf2.find_all(class_='size')
-	pagenum = BeautifulSoup(str(pagenum), 'html').span.string
+	pagenum = BeautifulSoup(str(pagenum), 'lxml').span.string
 	pagepattern = re.compile('页数：(\d+)页')
 	num = int(pagepattern.findall(pagenum)[0])
 	print('文章标题：%s' % title)
