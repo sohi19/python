@@ -1,0 +1,34 @@
+Collecting Rust
+  Downloading https://files.pythonhosted.org/packages/c3/ff/1ffe5c38505fd5226e344aaf91fd43dc38648ccf79ae7096ea0fa4f7f815/RUST-0.1.1.tar.gz
+Collecting matplotlib (from Rust)
+  Downloading https://files.pythonhosted.org/packages/ec/f2/536de9d6eb75b053ea53944da62564499d5a3c786efe77f7075e35954782/matplotlib-3.4.2-cp37-cp37m-win_amd64.whl (7.1MB)
+Collecting biopython (from Rust)
+  Downloading https://files.pythonhosted.org/packages/9d/18/2db178ac5dafad788f694454b57da0aa887aa93e470ee4e41e0099361cb3/biopython-1.78-cp37-cp37m-win_amd64.whl (2.3MB)
+Collecting pysam (from Rust)
+  Downloading https://files.pythonhosted.org/packages/99/5a/fc440eb5fffb5346e61a38b49991aa552e4b8b31e8493a101d2833ed1e19/pysam-0.16.0.1.tar.gz (3.6MB)
+    Complete output from command python setup.py egg_info:
+    # pysam: no cython available - using pre-compiled C
+    # pysam: htslib mode is shared
+    # pysam: HTSLIB_CONFIGURE_OPTIONS=None
+    '.' 不是内部或外部命令，也不是可运行的程序
+    或批处理文件。
+    '.' 不是内部或外部命令，也不是可运行的程序
+    或批处理文件。
+    # pysam: htslib configure options: None
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\HEDY\AppData\Local\Temp\pip-install-qrh7orni\pysam\setup.py", line 240, in <module>
+        htslib_make_options = run_make_print_config()
+      File "C:\Users\HEDY\AppData\Local\Temp\pip-install-qrh7orni\pysam\setup.py", line 68, in run_make_print_config
+        stdout = subprocess.check_output(["make", "-s", "print-config"])
+      File "C:\Users\HEDY\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 411, in check_output
+        **kwargs).stdout
+      File "C:\Users\HEDY\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 488, in run
+        with Popen(*popenargs, **kwargs) as process:
+      File "C:\Users\HEDY\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+        restore_signals, start_new_session)
+      File "C:\Users\HEDY\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+        startupinfo)
+    FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+    
+    ----------------------------------------
