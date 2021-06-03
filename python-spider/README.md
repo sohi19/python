@@ -217,21 +217,7 @@
         -k	搜索关键词
         -n  	下载商品的晒单图个数，即n个商店的晒单图
 
- * zhengfang_system_spider：对正方教务管理系统个人课表，个人学生成绩，绩点等简单爬取
  
- 	效果图：
-	
-	![image](/zhengfang_system_spider/screenshot/zf.png)
- 	
-	原理说明：
-	
-	暂无
-	
-	使用说明：
-	
-        cd zhengfang_system_spider
-        pip install -r requirements.txt
-        python spider.py
 
 ## 其它
 
