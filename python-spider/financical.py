@@ -79,7 +79,7 @@ class FinancialData():
 		req = requests.get(url = url, headers = self.headers)
 		req.encoding = 'utf-8'
 		html = req.text
-		page_bf = BeautifulSoup(html, 'lxml')
+		page_bf = BeautifulSoup(html, 'html')
 		#股票名称，股票代码
 		name = page_bf.find_all('span', class_ = 'name')[0].string
 		# code = page_bf.find_all('span', class_ = 'code')[0].string
@@ -125,7 +125,7 @@ class FinancialData():
 	"""
 	def insert_tables(self, name, table_name_list,table_date_list, url_list):
 		#打开数据库连接:host-连接主机地址,port-端口号,user-用户名,passwd-用户密码,db-数据库名,charset-编码
-		conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='yourpasswd',db='financialdata',charset='utf8')
+		conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='123456',db='python',charset='utf8')
 		#使用cursor()方法获取操作游标
 		cursor = conn.cursor()  
 		#插入信息

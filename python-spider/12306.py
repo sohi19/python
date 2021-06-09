@@ -6,13 +6,13 @@ from splinter.browser import Browser
 from time import sleep
 import traceback
 import time, sys
-
+from selenium import webdriver
 class huoche(object):
 	driver_name = ''
 	executable_path = ''
 	#用户名，密码
-	username = u"xxx"
-	passwd = u"xxx"
+	username = u"18382424545"
+	passwd = u"wfh.246437"
 	# cookies值得自己去找, 下面两个分别是沈阳, 哈尔滨
 	starts = u"%u6C88%u9633%2CSYT"
 	ends = u"%u54C8%u5C14%u6EE8%2CHBB"
@@ -29,19 +29,24 @@ class huoche(object):
 
 	"""网址"""
 	ticket_url = "https://kyfw.12306.cn/otn/leftTicket/init"
-	login_url = "https://kyfw.12306.cn/otn/login/init"
+	# login_url = "https://kyfw.12306.cn/otn/login/init"
+	login_url = "https://kyfw.12306.cn/otn/resources/login.html"
 	initmy_url = "https://kyfw.12306.cn/otn/index/initMy12306"
 	buy = "https://kyfw.12306.cn/otn/confirmPassenger/initDc"
 	
 	def __init__(self):
 		self.driver_name = 'chrome'
-		self.executable_path = 'D:/chromedriver'
+		self.executable_path = 'C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'
 
 	def login(self):
 		self.driver.visit(self.login_url)
-		self.driver.fill("loginUserDTO.user_name", self.username)
+		# a = self.driver.find_by_xpath('//li[@class="login-hd-code"]')
+		b = self.driver.find_by_xpath('//li[@class="login-hd-account"]')
+		b.click()
+		# a.click()
+		self.driver.find_by_id('J-userName').fill( self.username)
 		# sleep(1)
-		self.driver.fill("userDTO.password", self.passwd)
+		self.driver.find_by_id('J-password').fill( self.passwd)
 		print(u"等待验证码，自行输入...")
 		while True:
 			if self.driver.url != self.initmy_url:

@@ -7,7 +7,7 @@ import base64
 from urllib.request import urlretrieve
 
 from bs4 import BeautifulSoup
-
+from PIL import Image
 import PIL.Image as image
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -76,7 +76,7 @@ def save_full_bg(driver, full_bg_path="fbg.png", full_bg_class="geetest_canvas_f
 class Crack():
 	def __init__(self,keyword):
 		self.url = '*'
-		self.browser = webdriver.Chrome('D:\\chromedriver.exe')
+		self.browser = webdriver.Chrome('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')
 		self.wait = WebDriverWait(self.browser, 100)
 		self.keyword = keyword
 		self.BORDER = 6
