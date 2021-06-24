@@ -2,15 +2,8 @@
 
 下载京东商品的晒单图。
 
-## 作者
 
-* Website: [http://cuijiahua.com](http://cuijiahua.com "悬停显示")
-* Author: Jack Cui
-* Date: 2018.7.7
 
-## 效果图：
-
-![image](https://github.com/Jack-Cherish/Pictures/blob/master/jd.gif)
 
 ## 使用说明
 

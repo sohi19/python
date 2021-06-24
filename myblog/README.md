@@ -1,4 +1,4 @@
-# django个人博客附源码  personal blog with original code
+
 
 **运行环境（Runtime environment）**
 

@@ -4,9 +4,7 @@
 
 ## 作者
 
-* Website: [http://cuijiahua.com](http://cuijiahua.com "悬停显示")
-* Author: Jack Cui
-* Date: 2018.6.12
+
 
 ## 更新
 
